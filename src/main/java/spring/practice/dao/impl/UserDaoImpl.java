@@ -1,5 +1,6 @@
 package spring.practice.dao.impl;
 
+import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -8,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import spring.practice.dao.UserDao;
 import spring.practice.model.User;
-import java.util.List;
 
 @Repository
 public class UserDaoImpl implements UserDao {
