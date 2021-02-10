@@ -49,4 +49,16 @@ public class UserDaoImpl implements UserDao {
             throw new RuntimeException("Can't get list of Users", e);
         }
     }
+
+    @Override
+    public User get(Long id) {
+        try (Session session = sessionFactory.openSession()) {
+            Query<User> getUserByIdQuery = session.createQuery("FROM User u " +
+                    "WHERE id = :id", User.class);
+            getUserByIdQuery.setParameter("id", id);
+            return getUserByIdQuery.getSingleResult();
+        } catch (Exception e) {
+            throw new RuntimeException("Can't get User by id " + id, e);
+        }
+    }
 }
