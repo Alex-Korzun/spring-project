@@ -1,5 +1,7 @@
 package spring.practice.controller;
 
+import java.util.List;
+import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,9 +11,6 @@ import spring.practice.dto.UserResponseDto;
 import spring.practice.model.User;
 import spring.practice.service.UserService;
 import spring.practice.service.impl.UserMapper;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/user")
