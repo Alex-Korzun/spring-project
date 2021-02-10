@@ -42,11 +42,15 @@ public class UserController {
     public void inject() {
         User bob = new User();
         bob.setEmail("bob@gmail.com");
+        userService.add(bob);
         User alice = new User();
         alice.setEmail("alice@gmail.com");
+        userService.add(alice);
         User john = new User();
         john.setEmail("john.gmail.com");
+        userService.add(john);
         User kyle = new User();
         kyle.setEmail("kyle@gmail.com");
+        userService.add(kyle);
     }
 }
